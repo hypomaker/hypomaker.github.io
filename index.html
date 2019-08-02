@@ -15,9 +15,9 @@
         <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
         <script type="text/javascript">
             function calculateForm() {
-                var part1 = $('#Part-1').value();
-                var part2 = $('#Part-2').value();
-                var part3 = $('#Part-3').value();
+                var part1 = $('#Part-1')[0].value;
+                var part2 = $('#Part-2')[0].value;
+                var part3 = $('#Part-3')[0].value;
 
                 $('#wf-form-Hypo-Form').hide();
                 
@@ -28,6 +28,9 @@
             function reTryForm() {
                 $('.w-form-done').hide();
                 $('#wf-form-Hypo-Form').show();
+                $('#Part-1')[0].value = '';
+                $('#Part-2')[0].value = '';
+                $('#Part-3')[0].value = '';
             };
         </script>
     </head>
