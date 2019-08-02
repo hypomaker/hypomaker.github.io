@@ -13,6 +13,10 @@
         <link href="/img/webclip.png" rel="apple-touch-icon">
         <script src="/js/jquery-3.4.1.min.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+        <script src="/js/clipboard.min.js"></script>
+        <script>
+            new Clipboard('.actions__button');
+        </script>
         <script type="text/javascript">
             function calculateForm() {
                 var part1 = $('#Part-1')[0].value;
@@ -55,10 +59,10 @@
                     </form>
                     <div class="form__success w-form-done">
                         <div class="form__label">Отлично! Гипотеза готова 🔥</div><div class="success__done">
-                            <div class="done__text">Я предлагаю сделать кнопку красной, чтобы люди больше кликали. Я буду прав, если увеличатся клики на кнопку.</div>
+                            <div id="done-text" class="done__text">Я предлагаю сделать кнопку красной, чтобы люди больше кликали. Я буду прав, если увеличатся клики на кнопку.</div>
                         </div>
                         <div class="success_actions">
-                            <a href="#" class="actions__button w-button">Копировать в буфер</a>
+                            <button class="actions__button w-button" data-clipboard-target="#done-text">Копировать в буфер</button>
                             <a href="#" class="actions__button_secondary w-button re-try" onClick="reTryForm()">Сгенерировать еще гипотезу</a>
                         </div>
                     </div>
