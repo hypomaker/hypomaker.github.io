@@ -22,7 +22,7 @@
         <div class="hypothesis">
             <div class="hypothesis_container">
                 <div class="hypothesis_form w-form">
-                    <form id="wf-form-Hypo-Form" name="wf-form-Hypo-Form" data-name="Hypo Form" class="form__condition">
+                    <form id="wf-form-Hypo-Form" name="wf-form-Hypo-Form" data-name="Hypo Form" class="form__condition" onsubmit="CalculateForm(this);return false;">
                         <label for="Part" class="form__label">Что ты предлагаешь сделать?</label>
                         <input type="text" class="form__input w-input" autofocus="true" maxlength="256" name="Part-1" data-name="Part-1" placeholder="Например: сделать кнопку красной" id="Part-1" required="">
                         <label for="Part-2" class="form__label">Зачем это делать?</label>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="success_actions">
                             <a href="#" class="actions__button w-button">Копировать в буфер</a>
-                            <a href="#" class="actions__button_secondary w-button">Сгенерировать еще гипотезу</a>
+                            <a href="#" class="actions__button_secondary w-button re-try" onClick="reTryForm()">Сгенерировать еще гипотезу</a>
                         </div>
                     </div>
                     <div class="error-message w-form-fail"></div>
@@ -46,5 +46,22 @@
         </div>
         <script src="/js/jquery-3.4.1.min.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+        <script type="text/javascript">
+            function CalculateForm() {
+                var part1 = $('#Part-1').value();
+                var part2 = $('#Part-2').value();
+                var part3 = $('#Part-3').value();
+
+                $('#wf-form-Hypo-Form').hide();
+                
+                $('.w-form-done .done__text').html(“Я предлагаю ” + part1 + “, ” + part2 + “. Я буду прав, если ” + part3 + “.”);
+                $('.w-form-done').show();
+            };
+            
+            function reTryForm() {
+                $('.w-form-done').hide();
+                $('#wf-form-Hypo-Form').show();
+            };
+        </script>
 </body>
 </html>
