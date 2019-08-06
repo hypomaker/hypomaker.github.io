@@ -30,7 +30,7 @@
 
                 $('#wf-form-Hypo-Form').hide();
                 
-                $('.w-form-done .done__text').html('Я предлагаю ' + part1 + ', ' + part2 + '. Я буду прав, если ' + part3 + '.');
+                $('.w-form-done .done__text').html('Я пропоную ' + part1 + ', ' + part2 + '. Я буду правий, якщо ' + part3 + '.');
                 $('.w-form-done').show();
             };
             
@@ -56,28 +56,28 @@
                 <div>🤓</div>
             </div>
             <div class="title_languages">
-                <a href="/ua/index.html" class="languages__language">Українською</a>
+                <a href="/index.html" class="languages__language">На русском</a>
             </div>
         </div>
         <div class="hypothesis">
             <div class="hypothesis_container">
                 <div class="hypothesis_form w-form">
                     <form id="wf-form-Hypo-Form" name="wf-form-Hypo-Form" data-name="Hypo Form" class="form__condition" onsubmit="calculateForm();return false;">
-                        <label for="Part" class="form__label">Что ты предлагаешь сделать?</label>
-                        <input type="text" class="form__input w-input" autofocus="true" maxlength="256" name="Part-1" data-name="Part-1" placeholder="Например: сделать кнопку красной" id="Part-1" required="" value="">
-                        <label for="Part-2" class="form__label">Зачем это делать?</label>
-                        <input type="text" class="form__input w-input" maxlength="256" name="Part-2" data-name="Part-2" placeholder="Например: чтобы люди больше кликали" id="Part-2" required="" value="">
-                        <label for="Part-3" class="form__label">Что будет, если гипотеза сработает?</label>
-                        <input type="text" class="form__input w-input" maxlength="256" name="Part-3" data-name="Part-3" placeholder="Например: увеличатся клики на кнопку" id="Part-3" required="" value="">
-                        <input type="submit" value="Сгенерировать" data-wait="Генерирую 🤞" class="form__button w-button">
+                        <label for="Part" class="form__label">Що ти пропонуєш зробити?</label>
+                        <input type="text" class="form__input w-input" autofocus="true" maxlength="256" name="Part-1" data-name="Part-1" placeholder="Наприклад: зробити кнопку червоною" id="Part-1" required="" value="">
+                        <label for="Part-2" class="form__label">Навіщо це робити?</label>
+                        <input type="text" class="form__input w-input" maxlength="256" name="Part-2" data-name="Part-2" placeholder="Наприклад: щоб люди більше натискали" id="Part-2" required="" value="">
+                        <label for="Part-3" class="form__label">Що стане, якщо гіпотеза спрацює?</label>
+                        <input type="text" class="form__input w-input" maxlength="256" name="Part-3" data-name="Part-3" placeholder="Наприклад: збільшиться кількість натискань на кнопку" id="Part-3" required="" value="">
+                        <input type="submit" value="Генерувати" data-wait="Генерую 🤞" class="form__button w-button">
                     </form>
                     <div class="form__success w-form-done">
-                        <div class="form__label">Отлично! Гипотеза готова 🔥</div><div class="success__done">
-                            <div id="done__text" class="done__text">Я предлагаю сделать кнопку красной, чтобы люди больше кликали. Я буду прав, если увеличатся клики на кнопку.</div>
+                        <div class="form__label">Чудово! Гіпотеза готова 🔥</div><div class="success__done">
+                            <div id="done__text" class="done__text">Я пропоную зробити кнопку червоною, щоб люди більше натискали. Я буду правий, якщо збільшиться кількість натискань на кнопку.</div>
                         </div>
                         <div class="success_actions">
-                            <button class="actions__button w-button" data-clipboard-action="copy" data-clipboard-target="#done__text">Копировать в буфер</button>
-                            <a href="#" class="actions__button_secondary w-button re-try" onClick="reTryForm()">Сгенерировать еще гипотезу</a>
+                            <button class="actions__button w-button" data-clipboard-action="copy" data-clipboard-target="#done__text">Копіювати в буфер</button>
+                            <a href="#" class="actions__button_secondary w-button re-try" onClick="reTryForm()">Генерувати ще гіпотезу</a>
                         </div>
                     </div>
                     <div class="error-message w-form-fail"></div>
