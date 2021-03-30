@@ -40,7 +40,6 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  height: 70vh;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -252,7 +251,7 @@
   display: -ms-flexbox;
   display: flex;
   padding-top: 72px;
-  padding-bottom: 56px;
+  padding-bottom: 72px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
